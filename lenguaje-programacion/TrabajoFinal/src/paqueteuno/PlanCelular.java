@@ -21,7 +21,6 @@ public abstract class PlanCelular {
         numeroCelular = num;
     }
 
-    // Establecer
     public void establecerNombres(String n) {
         nombres = n;
     }
@@ -52,7 +51,6 @@ public abstract class PlanCelular {
 
     public abstract void establecerPagoMensual();
 
-    // Obtener
     public String obtenerNombres() {
         return nombres;
     }
@@ -88,16 +86,24 @@ public abstract class PlanCelular {
     @Override
     public String toString() {
 
-        return String.format("Nombres: %s\n"
-                + "Apellidos: %s\n"
-                + "Pasaporte: %s\n"
-                + "Barrio: %s\n"
-                + "Marca: %s\n"
-                + "Modelo: %s\n"
-                + "Número de celular: %s\n", nombres,
-                apellidos, pasaporte, barrio,
-                marca, modelo, numeroCelular);
+        return String.format(
+                  "     Nombres: %s\n"
+                + "     Apellidos: %s\n"
+                + "     Pasaporte: %s\n"
+                + "     Barrio: %s\n"
+                + "     Marca: %s\n"
+                + "     Modelo: %s\n"
+                + "     Número de celular: +593 %s\n",
+                nombres,
+                apellidos,
+                pasaporte,
+                barrio,
+                marca,
+                modelo,
+                numeroCelular);
 
     }
 
 }
+
+// @cbhas & @ALISrj

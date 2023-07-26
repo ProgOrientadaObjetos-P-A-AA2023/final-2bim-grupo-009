@@ -7,10 +7,10 @@ public class PlanPostPagoMegas extends PlanCelular {
     private double tarifaBase;
 
     public PlanPostPagoMegas(String n,
-            String a, String p, String b, String m, String mo, String num){
+            String a, String p, String b, String m, String mo, String num) {
         super(n, a, p, b, m, mo, num);
     }
-    
+
     public PlanPostPagoMegas(double megas, double costoGiga, double t, String n,
             String a, String p, String b, String m, String mo, String num) {
         super(n, a, p, b, m, mo, num);
@@ -52,10 +52,10 @@ public class PlanPostPagoMegas extends PlanCelular {
     public String toString() {
 
         return String.format("%s"
-                + "Megas Expresado en Gigas: %.2f\n"
-                + "Costo de Cada Giga: %.2f\n"
-                + "Tarifa Base: %.2f\n"
-                + "Pago Mensuak: %.2f\n",
+                + "     Megas Expresado en Gigas: %.2f GB\n"
+                + "     Costo Cada Giga: $%.2f x 1 GB\n"
+                + "     Tarifa Base: $%.2f\n"
+                + "     Pago Mensual: $%.2f\n",
                 super.toString(),
                 megasExpresadoGigas,
                 costoCadaGiga,
@@ -64,3 +64,5 @@ public class PlanPostPagoMegas extends PlanCelular {
     }
 
 }
+
+// @cbhas & @ALISrj

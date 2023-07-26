@@ -40,7 +40,8 @@ public class PlanPostPagoMinutos extends PlanCelular {
 
     @Override
     public void establecerPagoMensual() {
-        pagoMensual = (costoMinutoNacional * minutosNacionales) + (costoMinutoInternacional * minutosInternacionales);
+        pagoMensual = (costoMinutoNacional * minutosNacionales) + 
+                (costoMinutoInternacional * minutosInternacionales);
     }
 
     public double obtenerMinutosNacionales() {
@@ -63,11 +64,11 @@ public class PlanPostPagoMinutos extends PlanCelular {
     public String toString() {
 
         return String.format("%s"
-                + "Minutos Nacionales: %.2f\n"
-                + "Costo Minuto Nacional: %.2f\n"
-                + "Minutos Internacionales: %.2f\n"
-                + "Costo Minuto Internacional: %.2f\n"
-                + "Pago Mensuak: %.2f\n",
+                + "     Minutos Nacionales: %.2f\n"
+                + "     Costo Minuto Nacional: $%.2f\n"
+                + "     Minutos Internacionales: %.2f\n"
+                + "     Costo Minuto Internacional: $%.2f\n"
+                + "     Pago Mensual: $%.2f\n",
                 super.toString(),
                 minutosNacionales,
                 costoMinutoNacional,
@@ -77,3 +78,5 @@ public class PlanPostPagoMinutos extends PlanCelular {
     }
 
 }
+
+// @cbhas & @ALISrj

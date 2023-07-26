@@ -7,12 +7,12 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
     private double megas;
     private double costoGiga;
     private double descuento;
-    
+
     public PlanPostPagoMinutosMegasEconomico(String n,
-            String a, String p, String b, String m, String mo, String num){
+            String a, String p, String b, String m, String mo, String num) {
         super(n, a, p, b, m, mo, num);
     }
-    
+
     public PlanPostPagoMinutosMegasEconomico(double min, double costoMin,
             double meg, double costoG, double d, String n, String a, String p,
             String b, String m, String mo, String num) {
@@ -25,7 +25,6 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
         descuento = d;
     }
 
-    // Establecer
     public void establecerMinutos(double n) {
         minutos = n;
     }
@@ -48,13 +47,10 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
 
     @Override
     public void establecerPagoMensual() {
-
         double valorSinDescuento = (minutos * costoMinutos) + (megas * costoGiga);
         pagoMensual = valorSinDescuento - ((valorSinDescuento * descuento) / 100);
-
     }
 
-    // Obtener
     public double obtenerMinutos() {
         return minutos;
     }
@@ -79,12 +75,12 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
     public String toString() {
 
         return String.format("%s"
-                + "Minutos: %.2f\n"
-                + "Costo Minutos: %.2f\n"
-                + "Megas Expresado en Gigas: %.2f\n"
-                + "Costo Cada Giga: %.2f\n"
-                + "Descuento: %.2f\n"
-                + "Pago Mensual: $%.2f",
+                + "     Minutos: %.2f\n"
+                + "     Costo Minutos: $%.2f\n"
+                + "     Megas Expresado en Gigas: %.2f GB\n"
+                + "     Costo Cada Giga: $%.2f x 1 GB\n"
+                + "     Descuento: %.2f\n"
+                + "     Pago Mensual: $%.2f\n",
                 super.toString(),
                 minutos,
                 costoMinutos,
@@ -95,3 +91,5 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
     }
 
 }
+
+// @cbhas & @ALISrj
